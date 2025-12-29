@@ -175,7 +175,7 @@ async function run() {
 
   // Check env vars
   const required = [
-    "GOOGLE_API_KEY",
+    "GOOGLE_API",
     "GOOGLE_CX",
     "SONAR_API_KEY",
     "BACKEND_BASE_URL",
