@@ -1,4 +1,4 @@
-# Article Enhancer
+# Article Enhancer 
 
 A full-stack application to scrape blog articles, view them, and enhance them using AI .
 
