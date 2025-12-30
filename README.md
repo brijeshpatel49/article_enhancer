@@ -1,6 +1,6 @@
 # Article Enhancer
 
-A full-stack application to scrape blog articles, view them, and automatically enhance them using AI with external references.
+A full-stack application to scrape blog articles, view them, and enhance them using AI .
 
 ## Features
 
@@ -10,6 +10,9 @@ A full-stack application to scrape blog articles, view them, and automatically e
 - **Automated Workflow**: Simple one-click actions to fetch and enhance articles.
 - **Responsive UI**: Modern, light-themed interface built with React.
 
+## Live Demo
+
+Check out the live version of the project here: (https://article-enhancer.vercel.app/)
 ## Tech Stack
 
 ### Client
@@ -42,6 +45,23 @@ A full-stack application to scrape blog articles, view them, and automatically e
 │   ├── scripts/            # Scraper & Enhancer Logic
 │   └── ...
 └── README.md
+```
+
+## Architecture & Data Flow
+
+Below is the high-level architecture of the system:
+
+```mermaid
+graph TD
+    User[User] -->|Interacts| Client[React Frontend]
+    Client -->|REST API| Server[Node/Express Backend]
+    Server -->|CRUD Operations| DB[(MongoDB)]
+
+    subgraph Data Processing
+        Server -->|Scrapes Articles| Source[BeyondChats.com]
+        Server -->|Search Context| Google[Google Custom Search]
+        Server -->|Generate Content| AI[Perplexity/Sonar LLM]
+    end
 ```
 
 ## Setup & Installation
